@@ -38,7 +38,7 @@ export default function AddEmployee() {
 
     try {
      
-      const response = await axios.post("http://localhost:7088/api/addemp", newEmployee);
+      const response = await axios.post("https://employee-management-mern-backend-1.onrender.com/api/addemp", newEmployee);
 
       if (response.status === 200 || response.status === 201) {
         alert("Employee added successfully!");
@@ -63,11 +63,6 @@ export default function AddEmployee() {
       city: "",
       salary: ""
     });
-  };
-
-
-  const deleteEmployee = (id) => {
-    setEmployees(employees.filter((emp) => emp.id !== id));
   };
 
   return (
@@ -126,7 +121,7 @@ export default function AddEmployee() {
             <th>Age</th>
             <th>City</th>
             <th>Salary</th>
-            <th>Action</th>
+            
           </tr>
         </thead>
 
@@ -138,9 +133,6 @@ export default function AddEmployee() {
               <td>{emp.age}</td>
               <td>{emp.city}</td>
               <td>{emp.salary}</td>
-              <td>
-                <button className='button-del' onClick={() => deleteEmployee(emp.id)}>Delete</button>
-              </td>
             </tr>
           ))}
         </tbody>

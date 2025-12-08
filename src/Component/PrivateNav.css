@@ -1,38 +1,36 @@
-/* PrivateNav.css */
-
 .private-nav {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
   gap: 20px;
-  padding: 10px;
-  background-color: #f0f0f0;
-  flex-wrap: nowrap;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
 }
 
-.private-nav a {
+.private-nav__link {
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  padding: 8px 16px;
-  background-color: #e0e0e0;
+  color: #007bff;
+  font-weight: 500;
+  padding: 8px 12px;
   border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
 
-.private-nav a:hover {
-  background-color: #d5d5d5;
+.private-nav__link:hover {
+  background-color: #e6f0ff;
 }
 
-.private-nav button {
-  padding: 8px 16px;
-  background-color: #ff4d4d;
+.private-nav__button {
+  background-color: #dc3545;
   color: white;
   border: none;
+  padding: 8px 14px;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
 }
 
-.private-nav button:hover {
-  background-color: #e60000;
+.private-nav__button:hover {
+  background-color: #c82333;
 }
