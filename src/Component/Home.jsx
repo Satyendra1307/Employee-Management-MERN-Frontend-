@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="home-container">
       <div className="hero-section">
@@ -11,8 +14,19 @@ const Home = () => {
         </p>
 
         <div className="btn-group">
-          <button className="btn primary">Get Started</button>
-          <button className="btn secondary">View Employees</button>
+          <button
+            className="btn primary"
+            onClick={() => navigate("/add-employee")}
+          >
+            Get Started
+          </button>
+
+          <button
+            className="btn secondary"
+            onClick={() => navigate("/employees")}
+          >
+            View Employees
+          </button>
         </div>
       </div>
 
