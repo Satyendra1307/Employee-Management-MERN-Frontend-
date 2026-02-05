@@ -8,6 +8,7 @@ import Home from './Component/Home';
 import AddEmployee from './Component/AddEmployee';
 import PrivateNav from './Component/PrivateNav';
 import EmployeeDetails from './Component/EmployeeDetails';
+import Contact from './Component/Contact';
 
 function AppContaint() {
       const {isLoggedIn} = useAuth()
@@ -21,6 +22,7 @@ function AppContaint() {
         <Route path='/Signup' element={<Signup/>}></Route>
         <Route path='/Signin' element={<Signin/>}></Route>
         <Route path='/Home' element={<Home/>}></Route>
+        <Route path='/Contact' element={<Contact/>}></Route>
       </Routes>
     </div>
   )
